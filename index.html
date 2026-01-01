@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <!-- Top Panel: Score and Length -->
+        <div class="dashboard-top">
+            <div class="dashboard-item">
+                <div class="dashboard-label">SCORE</div>
+                <div class="dashboard-value" id="scoreDisplay">0</div>
+            </div>
+            <div class="dashboard-item">
+                <div class="dashboard-label">LENGTH</div>
+                <div class="dashboard-value" id="lengthDisplay">0</div>
+            </div>
+        </div>
+
+        <!-- Main Game Area -->
+        <div class="game-area">
+            <!-- Canvas -->
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- Right Panel: Speed and Status -->
+            <div class="dashboard-right">
+                <div class="dashboard-item">
+                    <div class="dashboard-label">SPEED</div>
+                    <div class="speed-control">
+                        <button id="speedDown" class="speed-btn">−</button>
+                        <div class="dashboard-value" id="speedDisplay">1.0x</div>
+                        <button id="speedUp" class="speed-btn">+</button>
+                    </div>
+                </div>
+                <div class="dashboard-item">
+                    <div class="dashboard-label">STATUS</div>
+                    <div class="dashboard-value status" id="statusDisplay">READY</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Info -->
+        <div class="controls-info">
+            <p><strong>Arrow Keys</strong> or <strong>WASD</strong> to move | <strong>Space</strong> or <strong>P</strong> to pause</p>
+        </div>
+
+        <!-- Start Screen Overlay -->
+        <div id="startScreen" class="start-screen">
+            <h2>MULTI-SNAKE</h2>
+            <p>Press <strong>Enter</strong> or <strong>Space</strong> to Start</p>
+        </div>
+
+        <!-- Game Over Overlay -->
+        <div id="gameOver" class="game-over hidden">
+            <h2>GAME OVER</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="restartBtn">PLAY AGAIN</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
